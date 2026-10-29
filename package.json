@@ -1,0 +1,57 @@
+{
+  "name": "dsh-deepseek-wallet",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Live DeepSeek account balance beside the composer and the CNY cost of each completed turn next to its token usage, priced with DeepSeek's official peak/off-peak table.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hmuer/dsh-deepseek-wallet.git"
+  },
+  "homepage": "https://github.com/Hmuer/dsh-deepseek-wallet#readme",
+  "bugs": {
+    "url": "https://github.com/Hmuer/dsh-deepseek-wallet/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "balance",
+    "cost",
+    "usage",
+    "billing",
+    "peak-off-peak"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cost.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
