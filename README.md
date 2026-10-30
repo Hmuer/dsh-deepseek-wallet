@@ -9,6 +9,14 @@ Live **DeepSeek account balance** and **per-turn CNY cost** inside the DSH Web c
 
 Everything is read-only and local to your machine: the plugin never sends your conversation anywhere.
 
+## Preview
+
+![The balance chip in the composer toolbar and the per-turn cost beside the token usage pill](assets/preview.png)
+
+The balance chip expands into the account breakdown (total / granted / topped-up):
+
+![The balance popover showing total, granted and topped-up amounts](assets/balance-popover.png)
+
 ## Install
 
 ```sh
